@@ -12,7 +12,7 @@ import java.util.Date;
 @Getter
 public class Token extends BaseModel{
 
-    private String token;
+    private String value;
     @ManyToOne
     private User user;
     private Date expiryAt;
