@@ -48,6 +48,13 @@ public class UserController {
         return userService.validateToken(token);
     }
 
+    @PostMapping("/users/{id}")
+    public  User getUser(@PathVariable("token") Long id) {
+
+        System.out.println("I have been called");
+        return new User();
+    }
+
     public SignUpResponseDto toSignUpResponseDto(User user) {
         if (user == null) {
             return null;
